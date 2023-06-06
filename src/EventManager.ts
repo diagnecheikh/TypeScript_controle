@@ -14,7 +14,7 @@ export class EventManager {
  
     public notifier(temperature: number, humidité: number, mesures : number = 0): void {
         this.listeners.forEach((listener) => {
-            listener.mettreAJour(temperature, humidité, [mesures + 1]);
+            listener.mettreAJour(temperature, humidité, [mesures]);
         });
     }
 

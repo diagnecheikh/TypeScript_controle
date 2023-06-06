@@ -34,14 +34,19 @@ function main(): void {
     stationMeteo.humidité++;
     stationMeteo.temperature -= 3;
   }
-  console.log("Appuyez sur entrée pour le prochain affichage"); rs.question();
-  const aff4 = new AfficheurTexte();
-  stationMeteo.eventManager.ajouterListener(aff4);
-  stationMeteo.humidité++;
+  
+  console.log("Appuyez sur entrée pour le prochain affichage");
+  rs.question();
+
+  stationMeteo.humidité = 50;
+  stationMeteo.temperature = 20;
+  stationMeteo.mesures = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
   for (let p = 0; p < 10; p++) {
-    console.log("Appuyez sur entrée pour le prochain affichage"); rs.question();
-    stationMeteo.humidité--;
-    stationMeteo.temperature += 2;
+    console.log("Appuyez sur entrée pour le prochain affichage");
+    rs.question();
+
+    stationMeteo.humidité++;
+    stationMeteo.temperature--;
   }
 
   
